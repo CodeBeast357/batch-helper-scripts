@@ -1,0 +1,1 @@
+@FOR /F "delims=" %%d IN ('DIR /S /B /A:D "%~f1"^|SORT /R') DO @ECHO "%%~fd" & @DIR /B "%%~fd"

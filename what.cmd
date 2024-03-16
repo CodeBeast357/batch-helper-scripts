@@ -1,0 +1,11 @@
+@ECHO OFF
+SETLOCAL
+SET INDEX=%2
+SET FILTER="delims="
+IF DEFINED INDEX SET FILTER="skip=%INDEX% delims="
+FOR /F %FILTER% %%c IN ('ECHO.^&^&where %1') DO (
+    TYPE "%%~c"
+    IF DEFINED INDEX GOTO EOF
+)
+:EOF
+ENDLOCAL

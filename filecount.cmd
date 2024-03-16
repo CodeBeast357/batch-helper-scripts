@@ -1,0 +1,1 @@
+@(FOR /F "delims=" %%f in ('DIR /B /A-D "%~1" 2^^^>NUL') DO @ECHO.%%~ff)|%SystemRoot%\System32\find.exe /V /C "::"
